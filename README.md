@@ -51,7 +51,7 @@ Um agradecimento especial aos **instrutores** que tornaram este aprendizado poss
 - **🚀 Diogo Medeiros Mainardes**
 - **💻 Renan Johannsen de Paula**
 
-### 💝 **Reflexão Final**
+### **Reflexão Final**
 
 Este projeto representa não apenas aprendizado técnico, mas também crescimento pessoal. Cada linha de código foi escrita com dedicação, inspirada pelos excelentes professores e pela qualidade do conteúdo fornecido.
 A jornada no desenvolvimento web é como explorar o Mundo Invertido do Stranger Things - pode ser as vezes muito desafiadora, mas recompensadora quando conseguimos criar algo extraordinário.
