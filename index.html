@@ -4,18 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mundo Invertido | Semana Front-end</title>
-
+    <title>Mundo Invertido</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/content/favicon.png"/>
   </head>
-  <body class="light-theme" aria-label="O site está utilizando o tema light" role="body">
-    <header aria-label="Cabeçalho da página.">
-      <audio id="music" autoplay>
-        <source src="assets/musics/normal-world.mpeg" aria-details="Audio do site" />
-      </audio>
+  <body class="light-theme">
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+      <div class="loading-lights">
+        <div class="loading-light"></div>
+        <div class="loading-light"></div>
+        <div class="loading-light"></div>
+        <div class="loading-light"></div>
+      </div>
+    </div>
+
+    <div id="particles-background"></div>
+    
+    <!-- Modal -->
+    <div class="modal" id="success-modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <h2 class="glitch" data-text="Bem-vindo ao Clube!">Bem-vindo ao Clube!</h2>
+        <p>Sua inscrição foi enviada com sucesso! Prepare-se para aventuras épicas no mundo de D&D.</p>
+        <button onclick="closeModal()">Fechar</button>
+      </div>
+    </div>
+
+    <header>
       <div class="header-content">
-        <img class="invert-element" src="assets/images/banner/logo.svg" alt="Imagem principal Mundo Invertido. Semana Frontend DIO." />
-        <p class="invert-element" role="text">
+        <img class="invert-element" src="assets/images/banner/logo.svg" alt="" />
+        <p class="invert-element">
           Uma jornada para quem não tem medo do desconhecido. O caminho para o
           Mundo invertido é incerto, repleto de obstáculos e perigos. Porém, a
           recompensa é grande: salvar Hawkings e o mundo todo das garras de
@@ -32,38 +51,35 @@
       <div id="bottom-characters" class="world-characters"></div>
 
       <section id="section-inverted-world" class="container">
-        <div class="section-texts">
-          <h1>O Mundo Invertido</h1>
-          <p role="text">
-            O Mundo Invertido parece uma cópia do nosso mundo, mas com criaturas
-            horrendas, tempestades assustadoras, muita escuridão e entidades
-            malignas. Um reino controlado por Vecna, que tem planos de trazer
-            tudo isso ao nosso mundo.
+        <div class="section-texts reveal-left">
+          <h2 class="glitch" data-text="O Mundo Invertido">O Mundo Invertido</h2>
+          <p class="typewriter">
+            O Mundo Invertido parece uma cópia do nosso mundo, mas com criaturas horrendas, tempestades assustadoras, muita escuridão e entidades malignas. Um reino controlado por Vecna, que tem planos de trazer tudo isso ao nosso mundo.
           </p>
         </div>
 
         <img
-          class="invert-element"
+          class="invert-element reveal-right"
           src="assets/images/content/inverted-world.png"
-          alt="Image ilustrativa do Mundo Invertido"
+          alt="Mundo Invertido"
         />
       </section>
 
       <section id="section-stranger-things-trailer" class="container">
-        <div class="video-frame" aria-hidden="true">
+        <div class="video-frame reveal-left">
           <iframe
             width="460"
             height="215"
-            src="https://www.youtube.com/embed/SJ9EFhQ3ANQ?controls=0"
+            src="https://www.youtube.com/embed/otutSrxYpa4?controls=0"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
         </div>
-        <div class="section-texts">
-          <h2>Stranger Things Vol. 4</h2>
-          <p role="text">
+        <div class="section-texts reveal-right">
+          <h2 class="glitch" data-text="Stranger Things Vol. 4">Stranger Things Vol. 4</h2>
+          <p>
             Mais experientes, os heróis de Stranger Things também precisam
             enfrentar desafios maiores do que nunca e fazer decisões que vão
             mudar suas vidas para sempre. Confira ao lado o trailer da quarta
@@ -74,23 +90,23 @@
 
       <section id="section-stranger-things-gallery">
         <div class="container section-text">
-          <h2>A segunda série mais assistida da Netflix</h2>
-          <ul class="gallery-container" role="gallery">
-            <li class="gallery-image invert-element">
-              <img src="assets/images/content/serie-image-01.png" alt="Imagem de Vecna" />
-            </li>
-            <li class="gallery-image invert-element">
-              <img src="assets/images/content/serie-image-02.png" alt="Imagem ilustrativa dos amigos de Eleven" />
-            </li>
-            <li class="gallery-image invert-element">
-              <img src="assets/images/content/serie-image-03.png" alt="Imagem Eleven assustada" />
-            </li>
-          </ul>
+          <h2 class="reveal glitch" data-text="A segunda série mais assistida da Netflix">A segunda série mais assistida da Netflix</h2>
+          <div class="gallery-container">
+            <div class="gallery-image invert-element reveal" style="animation-delay: 0.2s">
+              <img src="assets/images/content/serie-image-01.png" alt="" />
+            </div>
+            <div class="gallery-image invert-element reveal" style="animation-delay: 0.4s">
+              <img src="assets/images/content/serie-image-02.png" alt="" />
+            </div>
+            <div class="gallery-image invert-element reveal" style="animation-delay: 0.6s">
+              <img src="assets/images/content/serie-image-03.png" alt="" />
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="section-form" class="container">
-        <h2>O Clube Dungeons & Dragons</h2>
+      <section id="section-form" class="container reveal">
+        <h2 class="glitch" data-text="O Clube Dungeons & Dragons">O Clube Dungeons & Dragons</h2>
         <p>
           Para deter Vecna, os heróis de Stranger Things também precisam de
           você. O Clube de D&D mais famoso de Hawkings está com vagas abertas
@@ -103,22 +119,25 @@
           <h3>Entre para o clube de D&D e tenha experiências de <span>outro mundo<span></span></h3>
 
           <div class="form-container">
-            <form>
+            <form id="dnd-form">
               <label for="name">Nome Completo</label>
-              <input type="text" name="name" id="txtName">
-          
+              <input type="text" name="name" id="name" required>
+              <div class="success-message" id="name-success">✓ Nome válido</div>
+
               <label for="email">E-mail</label>
-              <input type="email" name="email" id="txtEmail">
-          
+              <input type="email" name="email" id="email" required>
+              <div class="success-message" id="email-success">✓ E-mail válido</div>
+
               <label for="level">Level</label>
-              <input type="text" name="level" id="txtLevel">
-          
+              <input type="text" name="level" id="level" required>
+              <div class="success-message" id="level-success">✓ Level válido</div>
+
               <label for="character">Personagem</label>
-              <textarea name="character" cols="30" rows="10" id="txtCharacter"></textarea>
+              <textarea name="character" id="character" cols="30" rows="10" required></textarea>
+              <div class="success-message" id="character-success">✓ Personagem criado</div>
             
-              <button type="button" id="btnSubscribe">Me inscrever</button>
+              <button type="submit">Me inscrever</button>
             </form>
-            
           </div>
         </div>
       </section>
@@ -126,15 +145,213 @@
 
     <footer>
       <p>
-        Projeto construído para fins didáticos, com o objetivo de colocar em
-        prática os conhecimentos de HTML, CSS e JavaScript aprendidos na DIO._
+        Projeto construído através da plataforma DIO, e do Bootcamp Ri Happy Front-end do zero #2.
       </p>
       <img src="assets/images/footer/logo.svg" alt="">
     </footer>
-    
-    <script type="module" src="assets/js/main.js"></script>
+
+    <audio id="music" src="assets/musics/normal-world.mpeg" autoplay></audio>
+
     <script>
-      
+      window.addEventListener('load', function() {
+        setTimeout(() => {
+          const loadingScreen = document.getElementById('loading-screen');
+          loadingScreen.classList.add('fade-out');
+          setTimeout(() => {
+            loadingScreen.style.display = 'none';
+          }, 500);
+        }, 2000);
+      });
+
+      window.addEventListener('click', function() {
+        const audio = document.getElementById('music');
+        audio.play();
+        audio.volume = 0.2;
+      })
+
+      function switchTheme() {
+        document.body.classList.toggle('dark-theme');
+        document.body.classList.toggle('light-theme');
+
+        const theme = document.body.classList[0];
+        const music = theme === 'light-theme' ? 'normal-world.mpeg' : 'inverted-world.mpeg'
+
+        const audio = document.getElementById('music');
+        audio.src = `assets/musics/${music}`;
+        audio.play();
+        audio.volume = 0.2;
+
+        createParticles();
+      }
+
+      function createParticles() {
+        const particlesContainer = document.getElementById('particles-background');
+        particlesContainer.innerHTML = '';
+        
+        const particleCount = 50;
+        
+        for (let i = 0; i < particleCount; i++) {
+          const particle = document.createElement('div');
+          particle.className = 'particle';
+          
+          const size = Math.random() * 8 + 3;
+          particle.style.width = size + 'px';
+          particle.style.height = size + 'px';
+          particle.style.left = Math.random() * 100 + '%';
+          particle.style.top = Math.random() * 100 + '%';
+          
+          particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+          particle.style.animationDelay = Math.random() * 2 + 's';
+          
+          particlesContainer.appendChild(particle);
+        }
+      }
+
+      function revealOnScroll() {
+        const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        
+        reveals.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const elementVisible = 150;
+          
+          if (elementTop < window.innerHeight - elementVisible) {
+            element.classList.add('active');
+          }
+        });
+      }
+
+      function typeWriter(element, text, speed = 30) {
+        element.innerHTML = '';
+        element.style.borderRight = '3px solid var(--primary-color)';
+        element.style.display = 'inline-block';
+        element.style.minHeight = '1.2em';
+        
+        let i = 0;
+        function type() {
+          if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+          } else {
+            setTimeout(() => {
+              element.style.borderRight = 'none';
+              element.classList.remove('typewriter');
+            }, 2000);
+          }
+        }
+        type();
+      }
+
+      function setupFormValidation() {
+        const form = document.getElementById('dnd-form');
+        const inputs = form.querySelectorAll('input, textarea');
+        
+        inputs.forEach(input => {
+          input.addEventListener('input', function() {
+            validateField(this);
+          });
+          
+          input.addEventListener('focus', function() {
+            this.classList.remove('error');
+          });
+        });
+        
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          let isValid = true;
+          inputs.forEach(input => {
+            if (!validateField(input)) {
+              isValid = false;
+            }
+          });
+          
+          if (isValid) {
+            showSuccessModal();
+            form.reset();
+            inputs.forEach(input => {
+              const successMsg = document.getElementById(input.id + '-success');
+              if (successMsg) successMsg.classList.remove('show');
+            });
+          }
+        });
+      }
+
+      function validateField(field) {
+        const value = field.value.trim();
+        const successMsg = document.getElementById(field.id + '-success');
+        
+        let isValid = false;
+        
+        switch(field.type) {
+          case 'email':
+            isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+            break;
+          case 'text':
+            isValid = value.length >= 2;
+            break;
+          default:
+            isValid = value.length > 0;
+        }
+        
+        if (isValid) {
+          field.classList.remove('error');
+          if (successMsg) successMsg.classList.add('show');
+        } else {
+          field.classList.add('error');
+          if (successMsg) successMsg.classList.remove('show');
+        }
+        
+        return isValid;
+      }
+
+      function showSuccessModal() {
+        const modal = document.getElementById('success-modal');
+        modal.classList.add('show');
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('success-modal');
+        modal.classList.remove('show');
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        
+        createParticles();
+        
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+        
+        setupFormValidation();
+        
+        setTimeout(() => {
+          const typewriterElements = document.querySelectorAll('.typewriter');
+          typewriterElements.forEach((element, index) => {
+            setTimeout(() => {
+              const text = element.textContent;
+              typeWriter(element, text, 30);
+            }, index * 1000);
+          });
+        }, 1000);
+        
+        document.addEventListener('click', function(e) {
+          if (document.body.classList.contains('dark-theme')) {
+            const glitchElements = document.querySelectorAll('.glitch');
+            glitchElements.forEach(el => {
+              el.style.animation = 'none';
+              setTimeout(() => {
+                el.style.animation = 'glitch 2s infinite';
+              }, 10);
+            });
+          }
+        });
+        
+        document.getElementById('success-modal').addEventListener('click', function(e) {
+          if (e.target === this) {
+            closeModal();
+          }
+        });
+      });
     </script>
   </body>
 </html>
